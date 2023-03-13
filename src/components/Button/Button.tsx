@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Button = () => {
+import * as ST from './styled'
+
+type ButtonProps = {
+    onClick: () => void
+    text: string
+}
+
+const Button: FC<ButtonProps> = ({onClick, text}) => {
+
+
+
     return (
-        <div>
-            
-        </div>
+        <ST.Button onClick={onClick}>{text}
+        </ST.Button>
     );
 };
 

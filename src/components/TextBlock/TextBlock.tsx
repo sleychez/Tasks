@@ -6,7 +6,7 @@ type TextProps = {
     text: string
 }
 
-const Text: FC<TextProps> = ({text}) => {
+const TextBlock: FC<TextProps> = ({text}) => {
 
 
     return (
@@ -17,4 +17,4 @@ const Text: FC<TextProps> = ({text}) => {
 }
 
 
-export default Text;
+export default TextBlock;

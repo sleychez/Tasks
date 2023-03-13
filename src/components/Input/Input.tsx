@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-const Input = () => {
+import * as ST from './styled'
+
+type InputProps = {
+    input: string,
+    setInput: (value: string) => void
+}
+
+const Input: FC<InputProps> = ({input,setInput}) => {
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(event.target.value)
+    }
     return (
-        <div>
+        <ST.Input type='text' value={input} onChange={handleChange}>
             
-        </div>
+        </ST.Input>
     );
 };
 
