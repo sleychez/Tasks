@@ -14,9 +14,7 @@ const Input: FC<InputProps> = ({input,setInput, disabled}) => {
         setInput(event.target.value)
     }
     return (
-        <ST.Input type='text' value={input} onChange={handleChange} disabled={disabled}>
-            
-        </ST.Input>
+        <ST.Input type='text' value={input} onChange={handleChange} disabled={disabled}/>
     );
 };
 

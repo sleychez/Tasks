@@ -38,7 +38,7 @@ const handleChangeInput = (value: string) => {
 
     return (
         <div>
-            <Input input={timeLeft} setInput={handleChangeInput} disabled={isRunning} ></Input>
+            <Input input={timeLeft} setInput={handleChangeInput} disabled={isRunning}/>
             <Button onClick={start} text={'Start'}/>
             <Button onClick={isRunning && timeLeft > 0 ? stop : reset } text={ isRunning && timeLeft > 0 ? 'Stop' : 'Reset' } />
         </div>

@@ -12,7 +12,7 @@ const Task1:FC = () => {
     const [text, setText] = useState('')
 
     const showInput = () => {
-        setText(input + ' ' + text)
+        setText(`${input} ${text}`)
         setInput('')
     }
 

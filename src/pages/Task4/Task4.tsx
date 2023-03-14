@@ -13,15 +13,16 @@ const Task4: FC = () => {
     const value = useRef<string>()
 
     const changeColor = () => {
+
+        value.current = color
+
        if (color === 'yellow') {
            setColor(value.current === 'red' ? 'green' : 'red' )
        }
        if (color === 'green') {
-           value.current = 'green'
            setColor('yellow')
            }
        if (color === 'red') {
-           value.current = 'red'
            setColor('yellow')
        }
     }
@@ -40,7 +41,8 @@ const Task4: FC = () => {
 
 
     return (
-        <ST.Block onPointerEnter={hover} onClick={changeColor} color={color} onPointerLeave={leave} onMouseDown={down} onMouseUp={hover}>{text}
+        <ST.Block onPointerEnter={hover} onClick={changeColor} color={color} onPointerLeave={leave} onMouseDown={down} onMouseUp={hover}>
+            {text}
         </ST.Block>
     );
 };
