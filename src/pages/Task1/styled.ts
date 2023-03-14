@@ -5,6 +5,3 @@ export const InputButton = styled.div`
   flex-direction: row;
 `
 
-export const Button = styled.button`
-    
-`

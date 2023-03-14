@@ -1,10 +1,10 @@
 import React, {FC, useRef, useState} from 'react';
-import * as ST from "../Display/styled";
 import Button from "../Button/Button";
+import Input from "../Input/Input";
 
 const DisplayTimer:FC = () => {
 
-    const [timeLeft, setTimeLeft] = useState(5);
+    const [timeLeft, setTimeLeft] = useState(0);
     const [isRunning, setIsRunning] = useState(false)
 
     const value = useRef<NodeJS.Timer | undefined>(undefined)
@@ -30,10 +30,15 @@ const DisplayTimer:FC = () => {
         clearInterval(value.current)
     }
 
+const handleChangeInput = (value: string) => {
+        Number(value)
+        setTimeLeft(Number(value))
+}
+
 
     return (
         <div>
-            <ST.Time>{Math.floor(timeLeft/60)}min {timeLeft % 60}sec</ST.Time>
+            <Input input={timeLeft} setInput={handleChangeInput} disabled={isRunning}/>
             <Button onClick={start} text={'Start'}/>
             <Button onClick={isRunning && timeLeft > 0 ? stop : reset } text={ isRunning && timeLeft > 0 ? 'Stop' : 'Reset' } />
         </div>

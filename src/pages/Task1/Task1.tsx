@@ -12,7 +12,12 @@ const Task1:FC = () => {
     const [text, setText] = useState('')
 
     const showInput = () => {
-        setText(input)
+        setText(`${input} ${text}`)
+        setInput('')
+    }
+
+    const clear = () => {
+        setText('')
     }
 
     return (
@@ -20,6 +25,7 @@ const Task1:FC = () => {
             <ST.InputButton>
                 <Input input={input} setInput={setInput}/>
                 <Button onClick={showInput} text={'Enter'}/>
+                <Button onClick={clear} text={'Clear'}/>
             </ST.InputButton>
             <TextBlock text={text}/>
         </>
