@@ -8,7 +8,7 @@ export const App = styled.div`
   
 `
 export const Header = styled.header`
-    display: flex;
+  display: flex;
   gap: 20px;
   margin-left: 30px
 `
