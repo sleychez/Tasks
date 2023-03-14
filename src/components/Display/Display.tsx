@@ -1,5 +1,5 @@
 import React, {FC, useRef, useState} from 'react';
-import Button from "./Button/Button";
+import Button from "../Button/Button";
 
 import * as ST from './styled'
 
@@ -11,6 +11,8 @@ const Display: FC<DisplayProps> = () => {
     const [time, setTime ] = useState(0)
 
     const [isRunning, setIsRunning] = useState(false)
+
+    const value = useRef<NodeJS.Timer | undefined>(undefined)
 
     const start = () => {
         if (!isRunning) {
@@ -31,7 +33,7 @@ const Display: FC<DisplayProps> = () => {
         setTime(0)
     }
 
-    const value = useRef<NodeJS.Timer | undefined>(undefined)
+
 
     return (
         <div>
