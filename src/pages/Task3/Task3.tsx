@@ -25,7 +25,7 @@ const Task3: FC = () => {
   };
 
   const reset = () => {
-    setTimeLeft(5);
+    setTimeLeft(0);
     setIsRunning(false);
     clearInterval(value.current);
   };

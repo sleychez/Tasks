@@ -9,28 +9,29 @@ const Task6: FC = () => {
 
   const [secondInput, setSecondInput] = useState("");
 
-  const [spanIsActive, setSpanIsActive] = useState(false);
+  const [sign, setSign] = useState("");
 
   const compare = () => {
     if (Number(firstInput) > Number(secondInput)) {
-      return ">";
+      setSign(">");
     }
     if (Number(firstInput) < Number(secondInput)) {
-      return "<";
+      setSign("<");
     }
     if (Number(firstInput) === Number(secondInput)) {
-      return "=";
+      setSign("=");
     }
   };
 
   const clear = () => {
+    setSign("");
     setFirstInput("");
     setSecondInput("");
   };
 
   const handleOnClick = () => {
-    setSpanIsActive(!spanIsActive);
-    if (spanIsActive) {
+    compare();
+    if (sign) {
       clear();
     }
   };
@@ -38,11 +39,11 @@ const Task6: FC = () => {
   return (
     <ST.Block>
       <Input type={"number"} input={firstInput} setInput={setFirstInput} />
-      <ST.Span>{spanIsActive ? compare() : ""}</ST.Span>
+      <ST.Span>{sign}</ST.Span>
       <Input type={"number"} input={secondInput} setInput={setSecondInput} />
       <Button
         onClick={handleOnClick}
-        text={spanIsActive ? "Сбросить" : "Сравнить"}
+        text={sign ? "Сбросить" : "Сравнить"}
       ></Button>
     </ST.Block>
   );

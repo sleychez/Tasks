@@ -12,5 +12,5 @@ export const Span = styled.span`
   height: 30px;
   font-weight: bold;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 25px;
 `;

@@ -10,4 +10,8 @@ export const Block = styled.div`
   margin: 50px 0 0 50px;
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
