@@ -9,4 +9,4 @@ export const Text = styled.div`
   padding: 0.25em 1em;
   width: 700px;
   height: 100px;
-`
+`;

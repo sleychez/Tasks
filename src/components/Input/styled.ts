@@ -9,4 +9,4 @@ export const Input = styled.input`
   padding: 0.25em 1em;
   width: 500px;
   height: 15px;
-`
+`;

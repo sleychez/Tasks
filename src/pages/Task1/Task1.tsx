@@ -1,35 +1,34 @@
-import React, {FC, useState} from 'react';
+import React, { FC, useState } from "react";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 
-import * as ST from './styled'
+import * as ST from "./styled";
 import TextBlock from "../../components/TextBlock/TextBlock";
 
-const Task1:FC = () => {
+const Task1: FC = () => {
+  const [input, setInput] = useState("");
 
-    const [input, setInput] = useState('')
+  const [text, setText] = useState("");
 
-    const [text, setText] = useState('')
+  const showInput = () => {
+    setText(`${input} ${text}`);
+    setInput("");
+  };
 
-    const showInput = () => {
-        setText(`${input} ${text}`)
-        setInput('')
-    }
+  const clear = () => {
+    setText("");
+  };
 
-    const clear = () => {
-        setText('')
-    }
-
-    return (
-        <>
-            <ST.InputButton>
-                <Input input={input} setInput={setInput}/>
-                <Button onClick={showInput} text={'Enter'}/>
-                <Button onClick={clear} text={'Clear'}/>
-            </ST.InputButton>
-            <TextBlock text={text}/>
-        </>
-    );
+  return (
+    <>
+      <ST.InputButton>
+        <Input input={input} setInput={setInput} />
+        <Button onClick={showInput} text={"Enter"} />
+        <Button onClick={clear} text={"Clear"} />
+      </ST.InputButton>
+      <TextBlock text={text} />
+    </>
+  );
 };
 
 export default Task1;
