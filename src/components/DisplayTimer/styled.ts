@@ -7,5 +7,4 @@ export const Time = styled.div`
   border: solid red 2px;
   width: fit-content;
   padding: 20px;
-  
-`
+`;

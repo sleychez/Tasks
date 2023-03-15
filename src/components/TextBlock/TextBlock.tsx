@@ -1,20 +1,13 @@
-import React, {FC} from 'react';
+import React, { FC } from "react";
 
-import * as ST from './styled'
+import * as ST from "./styled";
 
 type TextProps = {
-    text: string
-}
+  text: string;
+};
 
-const TextBlock: FC<TextProps> = ({text}) => {
-
-
-    return (
-        <ST.Text>
-            {text}
-        </ST.Text>
-    )
-}
-
+const TextBlock: FC<TextProps> = ({ text }) => {
+  return <ST.Text>{text}</ST.Text>;
+};
 
 export default TextBlock;

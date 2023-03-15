@@ -1,50 +1,51 @@
-import React, {FC, useRef, useState} from 'react';
+import React, { FC, useRef, useState } from "react";
 
-import * as ST from './styled'
-
-
+import * as ST from "./styled";
 
 const Task4: FC = () => {
+  const [text, setText] = useState("");
 
-   const [text, setText] = useState('')
+  const [color, setColor] = useState("red");
 
-    const [color, setColor] = useState('red')
+  const value = useRef<string>();
 
-    const value = useRef<string>()
-
-    const changeColor = () => {
-
-        value.current = color
-
-       if (color === 'yellow') {
-           setColor(value.current === 'red' ? 'green' : 'red' )
-       }
-       if (color === 'green') {
-           setColor('yellow')
-           }
-       if (color === 'red') {
-           setColor('yellow')
-       }
+  const changeColor = () => {
+    if (color === "yellow") {
+      setColor(value.current === "red" ? "green" : "red");
     }
-
-    const hover = () => {
-       setText('hover')
+    value.current = color;
+    if (color === "green") {
+      setColor("yellow");
     }
-
-    const leave = () => {
-       setText('out')
+    if (color === "red") {
+      setColor("yellow");
     }
+  };
 
-    const down = () => {
-        setText('click')
-    }
+  const hover = () => {
+    setText("hover");
+  };
 
+  const leave = () => {
+    setText("out");
+  };
 
-    return (
-        <ST.Block onPointerEnter={hover} onClick={changeColor} color={color} onPointerLeave={leave} onMouseDown={down} onMouseUp={hover}>
-            {text}
-        </ST.Block>
-    );
+  const down = () => {
+    setText("click");
+  };
+
+  return (
+    <ST.Block
+      onPointerEnter={hover}
+      onClick={changeColor}
+      color={color}
+      onPointerLeave={leave}
+      onMouseDown={down}
+      onMouseUp={hover}
+    >
+      {text}
+    </ST.Block>
+  );
 };
 
 export default Task4;
