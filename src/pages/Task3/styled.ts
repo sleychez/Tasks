@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const InputButton = styled.div`
+export const Block = styled.div`
   display: flex;
-  flex-direction: row;
-
+  align-items: center;
+  gap: 20px;
   margin: 100px 0 0 100px;
-  gap: 15px;
 `;
