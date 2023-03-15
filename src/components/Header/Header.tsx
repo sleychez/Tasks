@@ -22,6 +22,9 @@ const Header: FC = () => {
       <ST.StyledLink isActive={location.pathname === "/task5"} to="/task5">
         Task 5
       </ST.StyledLink>
+      <ST.StyledLink isActive={location.pathname === "/task6"} to="/task6">
+        Task 6
+      </ST.StyledLink>
     </ST.Header>
   );
 };

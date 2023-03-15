@@ -18,13 +18,13 @@ const Task5: FC = () => {
       value.current = color;
       setTimeout(() => {
         setColor("yellow");
-      }, 10000);
+      }, 5000);
     }
     if (color === "green") {
       value.current = color;
       setTimeout(() => {
         setColor("yellow");
-      }, 10000);
+      }, 5000);
     }
   }, [color]);
 
