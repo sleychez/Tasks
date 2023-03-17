@@ -5,8 +5,7 @@ export const Text = styled.div`
   border-radius: 3px;
   border: 2px solid black;
   color: black;
-  margin: 20px 0 0 50px;
   padding: 0.25em 1em;
-  width: 700px;
+  width: 100%;
   height: 100px;
 `;

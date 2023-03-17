@@ -20,14 +20,14 @@ const Task1: FC = () => {
   };
 
   return (
-    <>
+    <ST.Box>
       <ST.InputButton>
         <Input input={input} setInput={setInput} />
         <Button onClick={showInput} text={"Enter"} />
         <Button onClick={clear} text={"Clear"} />
       </ST.InputButton>
       <TextBlock text={text} />
-    </>
+    </ST.Box>
   );
 };
 

@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import * as ST from "./styled";
 
 type ButtonProps = {
-  onClick: () => void;
-  text: string;
+  onClick?: () => void;
+  text?: string | number;
 };
 
 const Button: FC<ButtonProps> = ({ onClick, text }) => {
