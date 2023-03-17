@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import * as ST from "./styled";
 
 type TextProps = {
-  text: string;
+  text?: string | number;
 };
 
 const TextBlock: FC<TextProps> = ({ text }) => {
